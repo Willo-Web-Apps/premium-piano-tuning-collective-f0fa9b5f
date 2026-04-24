@@ -1,11 +1,71 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+<footer style="background: oklch(0.07 0.004 60); border-top: 1px solid oklch(0.72 0.12 78 / 0.14);">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-14">
+
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+
+      <!-- Brand block -->
+      <div>
+        <p class="font-display font-light tracking-[0.2em] uppercase mb-2"
+           style="font-size: 1.1rem; color: oklch(0.88 0.018 75); letter-spacing: 0.2em;">
+          Clavara
+        </p>
+        <p class="font-body font-light text-xs tracking-[0.15em] uppercase"
+           style="color: oklch(0.72 0.12 78 / 0.7);">
+          Concert-Grade Piano Care, Delivered.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col sm:flex-row gap-6 sm:gap-10">
+        <a href="#mission"
+           class="font-body text-xs tracking-widest uppercase font-light transition-colors duration-150"
+           style="color: oklch(0.82 0.018 75 / 0.45);"
+           onmouseover="this.style.color='oklch(0.72 0.12 78)'"
+           onmouseout="this.style.color='oklch(0.82 0.018 75 / 0.45)'">
+          Mission
+        </a>
+        <a href="#services"
+           class="font-body text-xs tracking-widest uppercase font-light transition-colors duration-150"
+           style="color: oklch(0.82 0.018 75 / 0.45);"
+           onmouseover="this.style.color='oklch(0.72 0.12 78)'"
+           onmouseout="this.style.color='oklch(0.82 0.018 75 / 0.45)'">
+          Services
+        </a>
+        <a href="#venues"
+           class="font-body text-xs tracking-widest uppercase font-light transition-colors duration-150"
+           style="color: oklch(0.82 0.018 75 / 0.45);"
+           onmouseover="this.style.color='oklch(0.72 0.12 78)'"
+           onmouseout="this.style.color='oklch(0.82 0.018 75 / 0.45)'">
+          Where We Work
+        </a>
+        <a href="#contact"
+           class="font-body text-xs tracking-widest uppercase font-light transition-colors duration-150"
+           style="color: oklch(0.82 0.018 75 / 0.45);"
+           onmouseover="this.style.color='oklch(0.72 0.12 78)'"
+           onmouseout="this.style.color='oklch(0.82 0.018 75 / 0.45)'">
+          Contact
+        </a>
+      </div>
+
     </div>
+
+    <!-- Gold rule -->
+    <div class="my-10" style="height: 1px; background: linear-gradient(to right, transparent, oklch(0.72 0.12 78 / 0.25), transparent);"></div>
+
+    <!-- Bottom row -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <p class="font-body font-light text-xs tracking-widest"
+         style="color: oklch(0.82 0.018 75 / 0.28);">
+        &copy; {year} Clavara. All rights reserved.
+      </p>
+      <p class="font-body font-light text-xs tracking-widest"
+         style="color: oklch(0.82 0.018 75 / 0.28);">
+        RPT-Certified · New York · Los Angeles · Chicago · Boston · San Francisco · Houston · Miami
+      </p>
+    </div>
+
   </div>
 </footer>

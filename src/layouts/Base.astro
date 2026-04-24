@@ -8,7 +8,10 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "piano tuning business for major metro areas in the united states using only top tier techs (premium) and winning the best concert halls and venues as clients" } = Astro.props;
+const {
+  title = "Clavara — Concert-Grade Piano Care, Delivered.",
+  description = "Clavara deploys RPT-certified master piano technicians to concert halls, performing arts venues, and elite touring artists across America's major metro markets."
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -18,18 +21,26 @@ const { title = "Your New Business", description = "piano tuning business for ma
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0A0A0A" />
     <title>{title}</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Your New Business",
-      "description": "piano tuning business for major metro areas in the united states using only top tier techs (premium) and winning the best concert halls and venues as clients",
-      "url": "https://premium-piano-tuning-collective.onrender.com"
+      "name": "Clavara",
+      "description": "Concert-grade piano tuning and technical service for concert halls, performing arts venues, and elite touring artists across major U.S. metro markets.",
+      "url": "https://premium-piano-tuning-collective.onrender.com",
+      "serviceArea": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "areaServed": ["New York", "Los Angeles", "Chicago", "Boston", "San Francisco", "Miami", "Houston"]
     }
     </script>
   </head>
-  <body class="min-h-screen flex flex-col bg-surface-50 text-surface-900 font-body antialiased">
+  <body class="min-h-screen flex flex-col font-body antialiased"
+        style="background-color: oklch(0.09 0.005 60); color: oklch(0.82 0.018 75);">
     <Header />
     <main class="flex-1">
       <slot />
